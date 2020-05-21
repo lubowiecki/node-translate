@@ -1,0 +1,61 @@
+{
+  "name": "@lubowiecki/node-translate",
+  "version": "1.0.0",
+  "description": "Translation tools",
+  "main": "dist/cli.js",
+  "types": "dist/cli.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --detectOpenHandles"
+  },
+  "prepublishOnly": "tsc",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lubowiecki/node-translate.git"
+  },
+  "keywords": [
+    "node translation tools",
+    "node translation helpers"
+  ],
+  "author": "Dawid Lubowiecki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lubowiecki/node-translate/issues"
+  },
+  "homepage": "https://github.com/lubowiecki/node-translate#readme",
+  "dependencies": {
+    "@lubowiecki/node-notify": "^1.0.0",
+    "@lubowiecki/ts-utility": "^1.0.2",
+    "fs-extra": "^9.0.0",
+    "glob": "^7.1.6",
+    "ramda": "^0.27.0",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.1",
+    "@types/glob": "^7.1.1",
+    "@types/jest": "^25.2.3",
+    "@types/ramda": "^0.27.6",
+    "@types/yargs": "^15.0.5",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "ts-jest": "^26.0.0",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-sonarts": "^1.9.0",
+    "typescript": "^3.9.3"
+  },
+  "bin": {
+    "translate": "./dist/cli.js"
+  }
+}
