@@ -1,14 +1,14 @@
 {
   "name": "@lubowiecki/node-translate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Translation tools",
   "main": "dist/cli.js",
   "types": "dist/cli.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "npx rimraf dist && tsc",
     "test": "jest --detectOpenHandles"
   },
-  "prepublishOnly": "tsc",
+  "prepublishOnly": "npm run build",
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
@@ -32,8 +32,8 @@
   },
   "homepage": "https://github.com/lubowiecki/node-translate#readme",
   "dependencies": {
-    "@lubowiecki/node-notify": "^1.0.0",
-    "@lubowiecki/ts-utility": "^1.0.2",
+    "@lubowiecki/node-notify": "^1.0.1",
+    "@lubowiecki/ts-utility": "^1.0.3",
     "fs-extra": "^9.0.0",
     "glob": "^7.1.6",
     "ramda": "^0.27.0",
